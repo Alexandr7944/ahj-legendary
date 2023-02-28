@@ -41,6 +41,7 @@ class Goblin {
   stopGame() {
     const stop = document.querySelector('.stop-game');
     stop.onclick = () => {
+      this.removeGoblin();
       clearInterval(this.interval);
     };
   }
