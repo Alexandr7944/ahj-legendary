@@ -32,7 +32,7 @@ class Goblin {
       this.interval = setInterval(() => {
         this.removeGoblin();
         this.addGoblin(this.randomPosition())
-      }, 400);
+      }, 500);
       this.stopGame();
       this.win();
     }
