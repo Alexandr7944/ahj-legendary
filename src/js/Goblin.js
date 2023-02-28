@@ -1,4 +1,5 @@
 /* eslint-disable prettier/prettier */
+import img from '../img/goblin.png';
 
 class Goblin {
   constructor(element) {
@@ -9,20 +10,16 @@ class Goblin {
 
   removeGoblin() {
     const goblin = this.element.querySelector('.goblin');
-    goblin && goblin.classList.remove('goblin');
-    // goblin && goblin.remove();
+    goblin && goblin.remove();
   }
 
   addGoblin(num) {
-    // const newGoblin = document.createElement("img");
-    // newGoblin.src = "../img/goblin.png";
-    // newGoblin.setAttribute("src", "../img/goblin.png");
-    // newGoblin.alt = "Goblin";
-    // newGoblin.classList.add("goblin");
-    // this.element.querySelectorAll('.game__item')[num]
-    //   .appendChild(newGoblin);
+    const newGoblin = document.createElement("img");
+    newGoblin.src = img;
+    newGoblin.alt = "Goblin";
+    newGoblin.classList.add("goblin");
     this.element.querySelectorAll('.game__item')[num]
-      .classList.add('goblin') 
+      .appendChild(newGoblin);
   }
 
   startGame() {
@@ -56,12 +53,12 @@ class Goblin {
   }
 
   win() {
-    this.element.onclick = e => {
+    this.element.addEventListener('mouseover', e => {
       if (e.target.classList.value.includes('goblin')) {
         const goblin = document.querySelector('.count');
         goblin.textContent = +goblin.textContent + 1;
       }
-    }
+    });
   }
 }
 
