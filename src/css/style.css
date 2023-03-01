@@ -19,6 +19,18 @@
 }
 
 .wrapper-btn button {
+  border: none;
+  background-color: rgb(238, 226, 212);
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5),
+              inset 4px 4px 5px #fff;
+}
+
+.wrapper-btn button:hover {
+  box-shadow: inset 2px 4px 5px rgba(0, 0, 0, 0.5),
+              inset -4px -4px 5px #fff;
+}
+
+.wrapper-btn button {
   padding: 15px;
   border-radius: 10px;
   cursor: pointer;
@@ -47,12 +59,14 @@
   transform: translateX(-50%) translateY(-50%);
 }
 
-.goblin {
-  background: url(../img/goblin.png) center no-repeat;
-}
-
 .count {
+  margin-top: 20px;
   text-align: center;
   font-size: 40px;
   font-weight: 700;
+  border: 1px solid #000;
+  border-radius: 15px;
+  background-color: rgb(238, 226, 212);
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
 }
